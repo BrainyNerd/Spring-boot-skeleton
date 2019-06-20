@@ -21,7 +21,7 @@ public class UserControllerUnitTest {
     private MockMvc mockMvc;
 
     @Test
-    public void shouldReturnFoo() throws Exception {
+    public void shouldBeTrue() throws Exception {
         mockMvc.perform(get("/foo"))
                 .andExpect(content().contentType("text/plain;charset=UTF-8"))
                 .andExpect(content().string(containsString("foo")))    ;

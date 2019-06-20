@@ -17,8 +17,16 @@ repositories {
 dependencies {
     // Springboot
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     // Test
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile "org.springframework.boot:spring-boot-starter-test"
+
+    //Flyway
+    compile "org.flywaydb:flyway-core:5.2.4"
+
+    //Mysql-driver
+    compile 'mysql:mysql-connector-java'
 }
+
