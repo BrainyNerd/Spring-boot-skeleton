@@ -13,4 +13,7 @@ public class UserService {
         return userRepository.getOne(id);
     }
 
+    public User save(User user) {
+        return userRepository.saveAndFlush(user);
+    }
 }

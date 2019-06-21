@@ -16,8 +16,12 @@ public class UserController {
 
     @GetMapping(value = "/user/{id}")
     public User fetchUser(@PathVariable Integer id){
-        User user = userService.fetchUser(id);
-        return user;
+        return userService.fetchUser(id);
     }
-    
+
+    @PostMapping(value = "/user/add")
+    public User addUser(@RequestBody User user){
+        return userService.save(user);
+    }
+
 }
