@@ -1,5 +1,5 @@
 create table user_info(
-  id int(50) not null auto_increment primary key,
+  id serial not null PRIMARY KEY ,
   firstname varchar(50),
   lastname varchar(50)
 )

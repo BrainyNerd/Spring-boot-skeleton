@@ -28,5 +28,8 @@ dependencies {
 
     //Mysql-driver
     compile 'mysql:mysql-connector-java'
+    
+    //Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.8'
 }
 
