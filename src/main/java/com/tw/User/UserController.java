@@ -3,6 +3,8 @@ package com.tw.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class UserController {
     private final UserService userService;
@@ -26,6 +28,11 @@ public class UserController {
     @PostMapping(value = "/user/add")
     public User addUser(@RequestBody User user){
         return userService.save(user);
+    }
+
+    @GetMapping(value = "/user/all")
+    public List<User> getUsers(){
+        return userService.getUsers() ;
     }
 
 }
