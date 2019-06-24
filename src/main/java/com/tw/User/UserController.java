@@ -25,7 +25,7 @@ public class UserController {
         return userService.fetchUser(id);
     }
 
-    @PostMapping(value = "/user/add")
+    @RequestMapping(value = "/user/add", consumes = "application/json")
     public User addUser(@RequestBody User user){
         return userService.save(user);
     }
@@ -34,5 +34,4 @@ public class UserController {
     public List<User> getUsers(){
         return userService.getUsers() ;
     }
-
 }
