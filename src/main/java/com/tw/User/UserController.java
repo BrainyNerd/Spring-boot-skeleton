@@ -1,9 +1,9 @@
 package com.tw.User;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+        import java.util.List;
 
 @RestController
 public class UserController {
@@ -22,6 +22,7 @@ public class UserController {
 
     @GetMapping(value = "/user/{id}")
     public User fetchUser(@PathVariable Integer id){
+        System.out.println("Printing inside provider " + id);
         return userService.fetchUser(id);
     }
 
