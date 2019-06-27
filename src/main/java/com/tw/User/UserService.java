@@ -12,7 +12,8 @@ public class UserService {
     private UserRepository userRepository;
 
     public User fetchUser(Integer id) {
-        return userRepository.getOne(id);
+//        return userRepository.getOne(id);
+        return new User(2,"foo","soe");
     }
 
     public User save(User user) {
